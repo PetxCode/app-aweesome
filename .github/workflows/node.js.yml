@@ -55,8 +55,12 @@ jobs:
 
       - name: Deploy to web server
         run: |
-          sudo rm -rf /var/www/html/*
-          sudo cp -r dist/* /var/www/html/
-          sudo chown -R www-data:www-data /var/www/html/
-          sudo chmod -R 755 /var/www/html/
-          echo "Deployment completed successfully!"
+          sudo deploy-app
+
+      # - name: Deploy to web server
+      #   run: |
+      #     sudo rm -rf /var/www/html/*
+      #     sudo cp -r dist/* /var/www/html/
+      #     sudo chown -R www-data:www-data /var/www/html/
+      #     sudo chmod -R 755 /var/www/html/
+      #     echo "Deployment completed successfully!"
